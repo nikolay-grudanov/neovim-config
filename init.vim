@@ -29,15 +29,24 @@ Plug 'https://github.com/vimcolorschemes/vimcolorschemes', Cond(!exists('g:vscod
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'easymotion/vim-easymotion', Cond(!exists('g:vscode'))
 Plug 'asvetliakov/vim-easymotion', Cond(exists('g:vscode'), { 'as': 'vsc-easymotion' })
+Plug 'mattn/emmet-vim', Cond(!exists('g.vscode'))
+Plug 'mogelbrod/vim-jsonpath', Cond(!exists('g.vscode'))
+Plug 'puremourning/vimspector', Cond(!exists('g.vscode'))
+Plug 'szw/vim-maximizer', Cond(!exists('g.vscode'))
+Plug 'actionshrimp/vim-xpath', Cond(!exists('g.vscode'))
 
 call plug#end()
 
 colorscheme dracula
+let g:vimspector_enable_mappings = 'VISUAL_STUDIO'
+"let g:skip_xpath = 1
+"let g:python3_host_prog = '/home/grudanov/miniconda3'
 
 nnoremap <C-b> :NERDTree<CR>
 nnoremap <C-b> :NERDTreeToggle<CR>
 nnoremap <C-s> :w<CR>
 nnoremap <C-w> :q<CR>
+nnoremap <C-n> :tabnew
 
 " trn off search highlight
 nnoremap ,<space> :nohlsearch<CR>
