@@ -26,7 +26,7 @@ Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'saadparwaiz1/cmp_luasnip'
 Plug 'L3MON4D3/LuaSnip'
 Plug 'https://github.com/vimcolorschemes/vimcolorschemes', Cond(!exists('g:vscode'))
-Plug 'dracula/vim', { 'as': 'dracula' }, Cond(!exists('g:vscode'))
+Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'easymotion/vim-easymotion', Cond(!exists('g:vscode'))
 Plug 'asvetliakov/vim-easymotion', Cond(exists('g:vscode'), { 'as': 'vsc-easymotion' })
 
