@@ -8,11 +8,15 @@
 :set mouse=a
 :set encoding=utf-8
 
+function! Cond(Cond, ...)
+ let opts = get(a:000, 0, {})
+ return a:Cond ? opts : extend(opts, { 'on': [], 'for': [] })
+endfunction
+
 call plug#begin()
 
 Plug 'https://github.com/vim-airline/vim-airline'
 Plug 'https://github.com/preservim/nerdcommenter'
-Plug 'https://github.com/preservim/nerdtree'
 Plug 'https://github.com/ryanoasis/vim-devicons'
 "Plug 'https://github.com/tc50cal/vim-terminal'
 Plug 'neovim/nvim-lspconfig'
@@ -20,8 +24,15 @@ Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'saadparwaiz1/cmp_luasnip'
 Plug 'L3MON4D3/LuaSnip'
-Plug 'https://github.com/vimcolorschemes/vimcolorschemes'
-Plug 'dracula/vim', { 'as': 'dracula' }
+
+
+if exists('g:vscode')
+ Plug 'asvetliakov/vim-easymotion', { 'as': 'vsc-easymotion' }
+else
+ Plug 'vim-easymotion/vim-easymotion'
+ Plug 'https://github.com/preservim/nerdtree'
+ Plug 'https://github.com/vimcolorschemes/vimcolorschemes'
+ Plug 'dracula/vim', { 'as': 'dracula' }
 
 call plug#end()
 
