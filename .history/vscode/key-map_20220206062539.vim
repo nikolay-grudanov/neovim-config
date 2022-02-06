@@ -1,1 +1,0 @@
-nnoremap ,<space> :nohlsearch<CR>

@@ -1,1 +1,0 @@
-require "nvim-setting.keymaps.lua"
