@@ -3,11 +3,8 @@ if exists('g.vscode')
   source /home/grudanov/.config/nvim/vscode/plugins.vim
   source /home/grudanov/.config/nvim/vscode/key-map.vim
 else
-" Nvim
-  " Ссылки на файлы с конфигами
-  "-------------------------------------------------------------
+" Nvim 
   " source /home/grudanov/.config/nvim/nvim-setting/general.vim
-  "Ниже много заимствования из Neovim-from-scratch (всё почти копипаст)
   source /home/grudanov/.config/nvim/nvim-setting/lua/alpha.lua
   source /home/grudanov/.config/nvim/nvim-setting/lua/autocommands.lua
   source /home/grudanov/.config/nvim/nvim-setting/lua/autopairs.lua
@@ -28,10 +25,5 @@ else
   source /home/grudanov/.config/nvim/nvim-setting/lua/toggleterm.lua
   source /home/grudanov/.config/nvim/nvim-setting/lua/treesitter.lua
   source /home/grudanov/.config/nvim/nvim-setting/lua/whichkey.lua
-  "-------------------------------------------------------------------------
 
-  " Глобальные переменные 
-  "-------------------------------------------------------------------------
-  let g:vimspector_enable_mappings = 'VISUAL_STUDIO' 
-  "-------------------------------------------------------------------------
 end
