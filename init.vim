@@ -6,7 +6,7 @@ else
 " Nvim
   " Ссылки на файлы с конфигами
   "-------------------------------------------------------------
-  " source /home/grudanov/.config/nvim/nvim-setting/general.vim
+  source /home/grudanov/.config/nvim/nvim-setting/general.vim
   "Ниже много заимствования из Neovim-from-scratch (всё почти копипаст)
   source /home/grudanov/.config/nvim/nvim-setting/lua/alpha.lua
   source /home/grudanov/.config/nvim/nvim-setting/lua/autocommands.lua
@@ -33,5 +33,17 @@ else
   " Глобальные переменные 
   "-------------------------------------------------------------------------
   let g:vimspector_enable_mappings = 'VISUAL_STUDIO' 
+  "-------------------------------------------------------------------------
+  " Настройки
+  "-------------------------------------------------------------------------
+  :set number "Нумерация строк
+  :set relativenumber "Нумерация отностительно курсора вверх и вниз
+  :set autoindent
+  :set tabstop=4
+  :set shiftwidth=4
+  :set smarttab
+  :set softtabstop=4
+  :set mouse=a
+  :set encoding=utf-8
   "-------------------------------------------------------------------------
 end

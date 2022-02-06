@@ -1,60 +1,50 @@
-:set number "Нумерация строк
-:set relativenumber "Нумерация отностительно курсора вверх и вниз
-:set autoindent
-:set tabstop=4
-:set shiftwidth=4
-:set smarttab
-:set softtabstop=4
-:set mouse=a
-:set encoding=utf-8
-
 " function! Cond(Cond, ...)
 "  let opts = get(a:000, 0, {})
 "  return a:Cond ? opts : extend(opts, { 'on': [], 'for': [] })
 " endfunction
 
-call plug#begin()
+" call plug#begin()
 
-Plug 'https://github.com/vim-airline/vim-airline'
-Plug 'https://github.com/preservim/nerdcommenter'
-Plug 'https://github.com/preservim/nerdtree'
-Plug 'https://github.com/ryanoasis/vim-devicons'
-"Plug 'https://github.com/tc50cal/vim-terminal'
-Plug 'neovim/nvim-lspconfig'
-Plug 'hrsh7th/nvim-cmp'
-Plug 'hrsh7th/cmp-nvim-lsp'
-Plug 'saadparwaiz1/cmp_luasnip'
-Plug 'L3MON4D3/LuaSnip'
-Plug 'https://github.com/vimcolorschemes/vimcolorschemes'
-Plug 'dracula/vim', { 'as': 'dracula' }
-Plug 'easymotion/vim-easymotion'
-" Plug 'asvetliakov/vim-easymotion', Cond(exists('g:vscode'), { 'as': 'vsc-easymotion' })
-Plug 'mattn/emmet-vim'
-Plug 'mogelbrod/vim-jsonpath'
-Plug 'puremourning/vimspector'
-Plug 'szw/vim-maximizer'
-Plug 'actionshrimp/vim-xpath'
-Plug 'windwp/nvim-autopairs'
+" Plug 'https://github.com/vim-airline/vim-airline'
+" Plug 'https://github.com/preservim/nerdcommenter'
+" Plug 'https://github.com/preservim/nerdtree'
+" Plug 'https://github.com/ryanoasis/vim-devicons'
+" "Plug 'https://github.com/tc50cal/vim-terminal'
+" Plug 'neovim/nvim-lspconfig'
+" Plug 'hrsh7th/nvim-cmp'
+" Plug 'hrsh7th/cmp-nvim-lsp'
+" Plug 'saadparwaiz1/cmp_luasnip'
+" Plug 'L3MON4D3/LuaSnip'
+" Plug 'https://github.com/vimcolorschemes/vimcolorschemes'
+" Plug 'dracula/vim', { 'as': 'dracula' }
+" Plug 'easymotion/vim-easymotion'
+" " Plug 'asvetliakov/vim-easymotion', Cond(exists('g:vscode'), { 'as': 'vsc-easymotion' })
+" Plug 'mattn/emmet-vim'
+" Plug 'mogelbrod/vim-jsonpath'
+" Plug 'puremourning/vimspector'
+" Plug 'szw/vim-maximizer'
+" Plug 'actionshrimp/vim-xpath'
+" Plug 'windwp/nvim-autopairs'
 
-call plug#end()
+" call plug#end()
 
-colorscheme dracula
-let g:vimspector_enable_mappings = 'VISUAL_STUDIO'
-"let g:skip_xpath = 1
-"let g:python3_host_prog = '/home/grudanov/miniconda3'
+" colorscheme dracula
+" let g:vimspector_enable_mappings = 'VISUAL_STUDIO'
+" "let g:skip_xpath = 1
+" "let g:python3_host_prog = '/home/grudanov/miniconda3'
 
-nnoremap <space>e :NERDTree<CR>
-nnoremap <C-b> :NERDTree<CR>
-nnoremap <space>e :NERDTreeToggle<CR>
-nnoremap <C-b> :NERDTreeToggle<CR>
-nnoremap <space>w :w<CR>
-nnoremap <C-w> :w<CR>
-nnoremap <space>q :q<CR>
-nnoremap <C-q> :q<CR>
-nnoremap <C-n> :tabnew
+" nnoremap <space>e :NERDTree<CR>
+" nnoremap <C-b> :NERDTree<CR>
+" nnoremap <space>e :NERDTreeToggle<CR>
+" nnoremap <C-b> :NERDTreeToggle<CR>
+" nnoremap <space>w :w<CR>
+" nnoremap <C-w> :w<CR>
+" nnoremap <space>q :q<CR>
+" nnoremap <C-q> :q<CR>
+" nnoremap <C-n> :tabnew
 
-" trn off search highlight
-nnoremap ,<space> :nohlsearch<CR>
+" " trn off search highlight
+" nnoremap ,<space> :nohlsearch<CR>
 
 
 
@@ -63,7 +53,7 @@ lua << EOF
 vim.o.completeopt = 'menuone,noselect'
 
 -- luasnip setup
-local luasnip = require 'luasnip'
+--local luasnip = require 'luasnip'
 
 -- nvim-cmp setup
 local cmp = require 'cmp'
@@ -133,23 +123,23 @@ local on_attach = function(client, bufnr)
   local opts = { noremap=true, silent=true }
 
   -- See `:help vim.lsp.*` for documentation on any of the below functions
-  buf_set_keymap('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
-  buf_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
-  buf_set_keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
-  buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
-  buf_set_keymap('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
-  buf_set_keymap('n', '<space>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', opts)
-  buf_set_keymap('n', '<space>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', opts)
-  buf_set_keymap('n', '<space>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', opts)
-  buf_set_keymap('n', '<space>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
-  buf_set_keymap('n', '<space>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
-  buf_set_keymap('n', '<space>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
-  buf_set_keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
-  buf_set_keymap('n', '<space>e', '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', opts)
-  buf_set_keymap('n', '[d', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', opts)
-  buf_set_keymap('n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
-  buf_set_keymap('n', '<space>q', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
-  buf_set_keymap('n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
+  -- buf_set_keymap('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
+  -- buf_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
+  -- buf_set_keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
+  -- buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
+  -- buf_set_keymap('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
+  -- buf_set_keymap('n', '<space>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', opts)
+  -- buf_set_keymap('n', '<space>wr', '<cmd>lua vim.lsp.buf remove_workspace_folder()<CR>', opts)
+  -- buf_set_keymap('n', '<space>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', opts)
+  -- buf_set_keymap('n', '<space>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
+  -- buf_set_keymap('n', '<space>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
+  -- buf_set_keymap('n', '<space>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
+  -- buf_set_keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
+  -- buf_set_keymap('n', '<space>e', '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', opts)
+  -- buf_set_keymap('n', '[d', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', opts)
+  -- buf_set_keymap('n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
+  -- buf_set_keymap('n', '<space>q', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
+  -- buf_set_keymap('n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 
 end
 
