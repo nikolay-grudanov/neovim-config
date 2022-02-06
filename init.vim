@@ -1,5 +1,5 @@
 :set number "Нумерация строк
-":set relativenumber "Нумерация отностительно курсора вверх и вниз
+:set relativenumber "Нумерация отностительно курсора вверх и вниз
 :set autoindent
 :set tabstop=4
 :set shiftwidth=4
@@ -34,6 +34,7 @@ Plug 'mogelbrod/vim-jsonpath', Cond(!exists('g.vscode'))
 Plug 'puremourning/vimspector', Cond(!exists('g.vscode'))
 Plug 'szw/vim-maximizer', Cond(!exists('g.vscode'))
 Plug 'actionshrimp/vim-xpath', Cond(!exists('g.vscode'))
+Plug 'windwp/nvim-autopairs'
 
 call plug#end()
 
@@ -42,10 +43,14 @@ let g:vimspector_enable_mappings = 'VISUAL_STUDIO'
 "let g:skip_xpath = 1
 "let g:python3_host_prog = '/home/grudanov/miniconda3'
 
+nnoremap <space>e :NERDTree<CR>
 nnoremap <C-b> :NERDTree<CR>
+nnoremap <space>e :NERDTreeToggle<CR>
 nnoremap <C-b> :NERDTreeToggle<CR>
-nnoremap <C-s> :w<CR>
-nnoremap <C-w> :q<CR>
+nnoremap <space>w :w<CR>
+nnoremap <C-w> :w<CR>
+nnoremap <space>q :q<CR>
+nnoremap <C-q> :q<CR>
 nnoremap <C-n> :tabnew
 
 " trn off search highlight
