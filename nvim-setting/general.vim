@@ -232,6 +232,6 @@ command! -bang -complete=buffer -nargs=? Bclose call <SID>Bclose(<q-bang>, <q-ar
 nnoremap <silent> <Leader>bd :Bclose<CR>
 
 
-map gn :bn<cr>
-map gp :bp<cr>
+map g] :bn<cr>
+map g[ :bp<cr>
 map gw :Bclose<cr>u
