@@ -29,11 +29,9 @@ else
   source /home/grudanov/.config/nvim/nvim-setting/lua/treesitter.lua
   source /home/grudanov/.config/nvim/nvim-setting/lua/whichkey.lua
   "-------------------------------------------------------------------------
-
   " Глобальные переменные 
   "-------------------------------------------------------------------------
   let g:vimspector_enable_mappings = 'VISUAL_STUDIO'
-  let vim_markdown_preview_github=1 
   "-------------------------------------------------------------------------
   " Настройки
   "-------------------------------------------------------------------------

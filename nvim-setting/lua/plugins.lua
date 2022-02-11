@@ -59,8 +59,6 @@ return packer.startup(function(use)
   use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
   use "folke/which-key.nvim"
   use "szw/vim-maximizer"
-  use "shuntaka9576/preview-swagger.nvim"
-  use "JamshedVesuna/vim-markdown-preview"
 
 
   -- Colorschemes
