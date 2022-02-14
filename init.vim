@@ -8,7 +8,7 @@ else
   "-------------------------------------------------------------
   source /home/grudanov/.config/nvim/nvim-setting/general.vim
   "Ниже много заимствования из Neovim-from-scratch (всё почти копипаст)
-  source /home/grudanov/.config/nvim/nvim-setting/lua/alpha.lua
+  "source /home/grudanov/.config/nvim/nvim-setting/lua/alpha.lua
   source /home/grudanov/.config/nvim/nvim-setting/lua/autocommands.lua
   source /home/grudanov/.config/nvim/nvim-setting/lua/autopairs.lua
   source /home/grudanov/.config/nvim/nvim-setting/lua/bufferline.lua
@@ -28,6 +28,7 @@ else
   source /home/grudanov/.config/nvim/nvim-setting/lua/toggleterm.lua
   source /home/grudanov/.config/nvim/nvim-setting/lua/treesitter.lua
   source /home/grudanov/.config/nvim/nvim-setting/lua/whichkey.lua
+  source $HOME/.config/nvim/nvim-setting/lua/dashboard.lua
   "-------------------------------------------------------------------------
   " Глобальные переменные 
   "-------------------------------------------------------------------------
