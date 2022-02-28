@@ -1,4 +1,4 @@
-if exists('g.vscode')
+if exists('g:vscode')
   " VS Code
   source $HOME/.config/nvim/vscode/plugins.vim
   source $HOME/.config/nvim/vscode/key-map.vim
@@ -37,7 +37,7 @@ else
   " Настройки
   "-------------------------------------------------------------------------
   :set number "Нумерация строк
-  :set relativenumber "Нумерация отностительно курсора вверх и вниз
+  :set relativenumber "Нумерация относительно курсора вверх и вниз
   :set autoindent
   :set tabstop=4
   :set shiftwidth=4
@@ -46,5 +46,8 @@ else
   :set mouse=a
   :set encoding=utf-8
   :set spell spelllang=en,ru
+  :set shell=/usr/bin/zsh
+  " TODO Исправить ошибку и седлать поддержку русского языка.
+  ":set langmap=ёйцукенгшщзхъфывапролджэячсмитьбю;`qwertyuiop[]asdfghjkl\;'zxcvbnm\,.,ЙЦУКЕHГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ;QWERTYUIOP{}ASDFGHJKL:\"ZXCVBNM<>
   "-------------------------------------------------------------------------
 end

@@ -99,7 +99,10 @@ return packer.startup(function(use)
   
   -- Debug
   use "puremourning/vimspector"
-  
+  use "greghor/vim-pyShell" 
+  use "preservim/vimux"
+  use "julienr/vim-cellmode"  
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
