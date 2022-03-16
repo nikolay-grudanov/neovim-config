@@ -47,7 +47,5 @@ else
   :set encoding=utf-8
   :set spell spelllang=en,ru
   :set shell=/usr/bin/zsh
-  " TODO Исправить ошибку и седлать поддержку русского языка.
-  ":set langmap=ёйцукенгшщзхъфывапролджэячсмитьбю;`qwertyuiop[]asdfghjkl\;'zxcvbnm\,.,ЙЦУКЕHГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ;QWERTYUIOP{}ASDFGHJKL:\"ZXCVBNM<>
   "-------------------------------------------------------------------------
 end
