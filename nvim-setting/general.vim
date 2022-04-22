@@ -231,7 +231,3 @@ endfunction
 command! -bang -complete=buffer -nargs=? Bclose call <SID>Bclose(<q-bang>, <q-args>)
 nnoremap <silent> <Leader>bd :Bclose<CR>
 
-
-map g] :bn<cr>
-map g[ :bp<cr>
-map gw :Bclose<cr>u

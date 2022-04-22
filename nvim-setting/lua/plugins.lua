@@ -102,6 +102,8 @@ return packer.startup(function(use)
   use "greghor/vim-pyShell" 
   use "preservim/vimux"
   use "julienr/vim-cellmode"  
+ -- use "ycm-core/YouCompleteMe"
+
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

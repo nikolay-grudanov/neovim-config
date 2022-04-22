@@ -47,5 +47,7 @@ else
   :set encoding=utf-8
   :set spell spelllang=en,ru
   :set shell=/usr/bin/zsh
+  :set keymap=russian-jcukenwin
+  :set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
   "-------------------------------------------------------------------------
 end
