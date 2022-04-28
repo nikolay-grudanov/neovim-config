@@ -1,3 +1,9 @@
+:set keymap=russian-jcukenwin
+:set iminsert=0 " Чтобы при старте ввод был на английском, а не русском (start > i)
+:set imsearch=0 " Чтобы при старте поиск был на английском, а не русском (start > /)
+" Дополнительно можно добавить  Чтобы вместо Ctrl-^ нажимать Ctrl-L
+:inoremap <C-l> <C-^>
+ 
 nnoremap ,<space> :nohlsearch<CR>
 
 " Better Navigation

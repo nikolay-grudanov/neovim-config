@@ -46,8 +46,17 @@ else
   :set mouse=a
   :set encoding=utf-8
   :set spell spelllang=en,ru
-  :set shell=/usr/bin/zsh
   :set keymap=russian-jcukenwin
-  :set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
+  :set iminsert=0 " Чтобы при старте ввод был на английском, а не русском (start > i)
+  :set imsearch=0 " Чтобы при старте поиск был на английском, а не русском (start > /)
+  " Дополнительно можно добавить  Чтобы вместо Ctrl-^ нажимать Ctrl-L
+  :inoremap <C-l> <C-^>
+
+  "-------------------------------------------------------------------------
+  "NEOVIDE
+  "
+  let g:neovide_cursor_vfx_mode = "ripple"
+  :set guifont =Hack\ Nerd\ Font\ Mono:h16
+
   "-------------------------------------------------------------------------
 end
