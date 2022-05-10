@@ -101,7 +101,9 @@ return packer.startup(function(use)
   use "puremourning/vimspector"
   use "greghor/vim-pyShell" 
   use "preservim/vimux"
-  use "julienr/vim-cellmode"  
+  use "julienr/vim-cellmode"
+  use 'mfussenegger/nvim-jdtls'
+  use "/cjrh/vim-conda"
  -- use "ycm-core/YouCompleteMe"
 
 

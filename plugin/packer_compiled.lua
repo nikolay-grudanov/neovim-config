@@ -179,6 +179,11 @@ _G.packer_plugins = {
     path = "/Users/nikolajgrudanov/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
+  ["nvim-jdtls"] = {
+    loaded = true,
+    path = "/Users/nikolajgrudanov/.local/share/nvim/site/pack/packer/start/nvim-jdtls",
+    url = "https://github.com/mfussenegger/nvim-jdtls"
+  },
   ["nvim-lsp-installer"] = {
     loaded = true,
     path = "/Users/nikolajgrudanov/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer",
@@ -253,6 +258,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/nikolajgrudanov/.local/share/nvim/site/pack/packer/start/vim-cellmode",
     url = "https://github.com/julienr/vim-cellmode"
+  },
+  ["vim-conda"] = {
+    loaded = true,
+    path = "/Users/nikolajgrudanov/.local/share/nvim/site/pack/packer/start/vim-conda",
+    url = "https://github.com//cjrh/vim-conda"
   },
   ["vim-maximizer"] = {
     loaded = true,

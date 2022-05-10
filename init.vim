@@ -55,7 +55,8 @@ else
   "-------------------------------------------------------------------------
   "NEOVIDE
   "
-  let g:neovide_cursor_vfx_mode = "ripple"
+  let g:neovide_cursor_vfx_mode = "sonicboom"
+  let g:neovide_fullscreen=v:true
   :set guifont =Hack\ Nerd\ Font\ Mono:h16
 
   "-------------------------------------------------------------------------
