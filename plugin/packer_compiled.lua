@@ -234,6 +234,11 @@ _G.packer_plugins = {
     path = "/Users/nikolajgrudanov/.local/share/nvim/site/pack/packer/start/project.nvim",
     url = "https://github.com/ahmedkhalf/project.nvim"
   },
+  tagbar = {
+    loaded = true,
+    path = "/Users/nikolajgrudanov/.local/share/nvim/site/pack/packer/start/tagbar",
+    url = "https://github.com/majutsushi/tagbar"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/Users/nikolajgrudanov/.local/share/nvim/site/pack/packer/start/telescope.nvim",
@@ -244,10 +249,20 @@ _G.packer_plugins = {
     path = "/Users/nikolajgrudanov/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
     url = "https://github.com/akinsho/toggleterm.nvim"
   },
+  ["translate.vim"] = {
+    loaded = true,
+    path = "/Users/nikolajgrudanov/.local/share/nvim/site/pack/packer/start/translate.vim",
+    url = "https://github.com/skanehira/translate.vim"
+  },
   vim = {
     loaded = true,
     path = "/Users/nikolajgrudanov/.local/share/nvim/site/pack/packer/start/vim",
     url = "https://github.com/dracula/vim"
+  },
+  ["vim-autoformat"] = {
+    loaded = true,
+    path = "/Users/nikolajgrudanov/.local/share/nvim/site/pack/packer/start/vim-autoformat",
+    url = "https://github.com/Chiel92/vim-autoformat"
   },
   ["vim-bbye"] = {
     loaded = true,
@@ -264,10 +279,25 @@ _G.packer_plugins = {
     path = "/Users/nikolajgrudanov/.local/share/nvim/site/pack/packer/start/vim-conda",
     url = "https://github.com//cjrh/vim-conda"
   },
+  ["vim-isort"] = {
+    loaded = true,
+    path = "/Users/nikolajgrudanov/.local/share/nvim/site/pack/packer/start/vim-isort",
+    url = "https://github.com/fisadev/vim-isort"
+  },
+  ["vim-jinja"] = {
+    loaded = true,
+    path = "/Users/nikolajgrudanov/.local/share/nvim/site/pack/packer/start/vim-jinja",
+    url = "https://github.com/mitsuhiko/vim-jinja"
+  },
   ["vim-maximizer"] = {
     loaded = true,
     path = "/Users/nikolajgrudanov/.local/share/nvim/site/pack/packer/start/vim-maximizer",
     url = "https://github.com/szw/vim-maximizer"
+  },
+  ["vim-plugin-ruscmd"] = {
+    loaded = true,
+    path = "/Users/nikolajgrudanov/.local/share/nvim/site/pack/packer/start/vim-plugin-ruscmd",
+    url = "https://github.com/powerman/vim-plugin-ruscmd"
   },
   ["vim-pyShell"] = {
     loaded = true,
