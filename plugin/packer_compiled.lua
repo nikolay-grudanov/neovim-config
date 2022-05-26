@@ -124,6 +124,12 @@ _G.packer_plugins = {
     path = "/Users/nikolajgrudanov/.local/share/nvim/site/pack/packer/start/colorschemes",
     url = "https://github.com/lunarvim/colorschemes"
   },
+  ["cosmic-ui"] = {
+    config = { "\27LJ\2\n1\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\22user.ui.cosmic-ui\frequire\0" },
+    loaded = true,
+    path = "/Users/nikolajgrudanov/.local/share/nvim/site/pack/packer/start/cosmic-ui",
+    url = "https://github.com/CosmicNvim/cosmic-ui"
+  },
   ["darkplus.nvim"] = {
     loaded = true,
     path = "/Users/nikolajgrudanov/.local/share/nvim/site/pack/packer/start/darkplus.nvim",
@@ -163,6 +169,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/nikolajgrudanov/.local/share/nvim/site/pack/packer/start/nlsp-settings.nvim",
     url = "https://github.com/tamago324/nlsp-settings.nvim"
+  },
+  ["nui.nvim"] = {
+    loaded = true,
+    path = "/Users/nikolajgrudanov/.local/share/nvim/site/pack/packer/start/nui.nvim",
+    url = "https://github.com/MunifTanjim/nui.nvim"
   },
   ["null-ls.nvim"] = {
     loaded = true,
@@ -322,6 +333,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: cosmic-ui
+time([[Config for cosmic-ui]], true)
+try_loadstring("\27LJ\2\n1\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\22user.ui.cosmic-ui\frequire\0", "config", "cosmic-ui")
+time([[Config for cosmic-ui]], false)
 if should_profile then save_profiles() end
 
 end)
