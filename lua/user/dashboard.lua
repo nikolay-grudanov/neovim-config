@@ -28,7 +28,7 @@ g.dashboard_custom_section = {
   e = { description = {  icons.bookmark .. " Bookmarks " }, command = "Telescope marks" },
   -- f = { description = {  icons.last .. " Last Session " }, command = "SessionLoad" },
   g = { description = {  icons.file2 .. " Find project " }, command = "Telescope projects"}, 
-  h = { description = {  icons.config .. " Configuration " }, command = ":e ~/.config/nvim/init.lua"},
+  h = { description = {  icons.config .. " Configuration " }, command = ":e ~/.config/nvim/iinit.lua"},
   i = { description = {  icons.error2 .. " Quit Neovim " }, command = ":qa"},
 }
 

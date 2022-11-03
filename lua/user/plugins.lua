@@ -103,7 +103,7 @@ return packer.startup(function(use)
   use "preservim/vimux"
   use "julienr/vim-cellmode"
   use 'mfussenegger/nvim-jdtls'
-  use "/cjrh/vim-conda"
+  -- use "/cjrh/vim-conda"
  -- use "ycm-core/YouCompleteMe"
   -- Шапка с импортами приводим в порядок
   use 'fisadev/vim-isort'
@@ -120,15 +120,25 @@ return packer.startup(function(use)
   
     
   -- UI
-    use 'MunifTanjim/nui.nvim'
-    use 'nvim-lua/plenary.nvim' 
-    use{
-        'CosmicNvim/cosmic-ui',
-        requires = { 'MunifTanjim/nui.nvim', 'nvim-lua/plenary.nvim' },
-        config = function()
-            require('user.ui.cosmic-ui')
-        end,
-    }
+    -- use 'MunifTanjim/nui.nvim'
+    -- use 'nvim-lua/plenary.nvim' 
+    -- use{
+    --     'CosmicNvim/cosmic-ui',
+    --     requires = { 'MunifTanjim/nui.nvim', 'nvim-lua/plenary.nvim' },
+    --     config = function()
+    --         require('user.ui.cosmic-ui')
+    --     end,
+    -- }
+
+  -- JS/JSX/TS
+use 'pangloss/vim-javascript'
+use 'leafgarland/typescript-vim'
+use 'peitalin/vim-jsx-typescript'
+use 'maxmellon/vim-jsx-pretty'
+-- TS from here https://jose-elias-alvarez.medium.com/configuring-neovims-lsp-client-for-typescript-development-5789d58ea9c
+use 'jose-elias-alvarez/null-ls.nvim'
+use 'jose-elias-alvarez/nvim-lsp-ts-utils'
+use 'nvim-lua/plenary.nvim'
     --
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

@@ -124,12 +124,6 @@ _G.packer_plugins = {
     path = "/Users/nikolajgrudanov/.local/share/nvim/site/pack/packer/start/colorschemes",
     url = "https://github.com/lunarvim/colorschemes"
   },
-  ["cosmic-ui"] = {
-    config = { "\27LJ\2\n1\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\22user.ui.cosmic-ui\frequire\0" },
-    loaded = true,
-    path = "/Users/nikolajgrudanov/.local/share/nvim/site/pack/packer/start/cosmic-ui",
-    url = "https://github.com/CosmicNvim/cosmic-ui"
-  },
   ["darkplus.nvim"] = {
     loaded = true,
     path = "/Users/nikolajgrudanov/.local/share/nvim/site/pack/packer/start/darkplus.nvim",
@@ -170,11 +164,6 @@ _G.packer_plugins = {
     path = "/Users/nikolajgrudanov/.local/share/nvim/site/pack/packer/start/nlsp-settings.nvim",
     url = "https://github.com/tamago324/nlsp-settings.nvim"
   },
-  ["nui.nvim"] = {
-    loaded = true,
-    path = "/Users/nikolajgrudanov/.local/share/nvim/site/pack/packer/start/nui.nvim",
-    url = "https://github.com/MunifTanjim/nui.nvim"
-  },
   ["null-ls.nvim"] = {
     loaded = true,
     path = "/Users/nikolajgrudanov/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
@@ -199,6 +188,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/nikolajgrudanov/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer",
     url = "https://github.com/williamboman/nvim-lsp-installer"
+  },
+  ["nvim-lsp-ts-utils"] = {
+    loaded = true,
+    path = "/Users/nikolajgrudanov/.local/share/nvim/site/pack/packer/start/nvim-lsp-ts-utils",
+    url = "https://github.com/jose-elias-alvarez/nvim-lsp-ts-utils"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
@@ -265,6 +259,11 @@ _G.packer_plugins = {
     path = "/Users/nikolajgrudanov/.local/share/nvim/site/pack/packer/start/translate.vim",
     url = "https://github.com/skanehira/translate.vim"
   },
+  ["typescript-vim"] = {
+    loaded = true,
+    path = "/Users/nikolajgrudanov/.local/share/nvim/site/pack/packer/start/typescript-vim",
+    url = "https://github.com/leafgarland/typescript-vim"
+  },
   vim = {
     loaded = true,
     path = "/Users/nikolajgrudanov/.local/share/nvim/site/pack/packer/start/vim",
@@ -285,20 +284,30 @@ _G.packer_plugins = {
     path = "/Users/nikolajgrudanov/.local/share/nvim/site/pack/packer/start/vim-cellmode",
     url = "https://github.com/julienr/vim-cellmode"
   },
-  ["vim-conda"] = {
-    loaded = true,
-    path = "/Users/nikolajgrudanov/.local/share/nvim/site/pack/packer/start/vim-conda",
-    url = "https://github.com//cjrh/vim-conda"
-  },
   ["vim-isort"] = {
     loaded = true,
     path = "/Users/nikolajgrudanov/.local/share/nvim/site/pack/packer/start/vim-isort",
     url = "https://github.com/fisadev/vim-isort"
   },
+  ["vim-javascript"] = {
+    loaded = true,
+    path = "/Users/nikolajgrudanov/.local/share/nvim/site/pack/packer/start/vim-javascript",
+    url = "https://github.com/pangloss/vim-javascript"
+  },
   ["vim-jinja"] = {
     loaded = true,
     path = "/Users/nikolajgrudanov/.local/share/nvim/site/pack/packer/start/vim-jinja",
     url = "https://github.com/mitsuhiko/vim-jinja"
+  },
+  ["vim-jsx-pretty"] = {
+    loaded = true,
+    path = "/Users/nikolajgrudanov/.local/share/nvim/site/pack/packer/start/vim-jsx-pretty",
+    url = "https://github.com/maxmellon/vim-jsx-pretty"
+  },
+  ["vim-jsx-typescript"] = {
+    loaded = true,
+    path = "/Users/nikolajgrudanov/.local/share/nvim/site/pack/packer/start/vim-jsx-typescript",
+    url = "https://github.com/peitalin/vim-jsx-typescript"
   },
   ["vim-maximizer"] = {
     loaded = true,
@@ -333,10 +342,6 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: cosmic-ui
-time([[Config for cosmic-ui]], true)
-try_loadstring("\27LJ\2\n1\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\22user.ui.cosmic-ui\frequire\0", "config", "cosmic-ui")
-time([[Config for cosmic-ui]], false)
 if should_profile then save_profiles() end
 
 end)
