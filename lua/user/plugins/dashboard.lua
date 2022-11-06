@@ -1,5 +1,3 @@
-local icons = require('user.theme.icons')
- 
 local g = vim.g
 local fn = vim.fn
 
@@ -21,7 +19,7 @@ g.dashboard_session_directory = vim.fn.stdpath('data') .. '/sessions'
  }
 
 g.dashboard_custom_section = {
-  a = { description = {  icons.file .. " Find File " }, command = "Telescope find_files" },
+  a = { description = {  "  Find File" }, command = "Telescope find_files" },
   b = { description = {  icons.clock2 .. " Recently used files " }, command = "Telescope oldfiles" },
  -- c = { description = {  icons.file2 .. " Find Word " }, command = "Telescope live_grep" },
   d = { description = {  icons.pluse .. " New File " }, command = "DashboardNewFile" },
@@ -37,6 +35,6 @@ local plugins_count = fn.len(fn.globpath("~/.local/share/nvim/site/pack/packer/s
 g.dashboard_custom_footer = {
   "G-NeoVim loaded " .. plugins_count .. " plugins ",
   " ",
- icons.branch .. "  github.com/nikolay-grudanov/neovim-config"  
+ "  github.com/nikolay-grudanov/neovim-config"  
 }
 
