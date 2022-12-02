@@ -11,6 +11,9 @@ local opt = vim.opt             -- global/buffer/windows-scoped options
 cmd [[:set keymap=russian-jcukenwin]]
 -- Дополнительно можно добавить  Чтобы вместо Ctrl-^ нажимать Ctrl-L
 cmd [[:inoremap <C-l> <C-^>]]
+opt.termguicolors = true --  24-bit RGB colors
+opt.iminsert = 0 -- Чтобы при старте ввод был на английском, а не русском (start > i)
+opt.imsearch = 0 -- Чтобы при старте поиск был на английском, а не русском (start > /)
 -- Подсвечивает на доли секунды скопированную часть текста
 exec([[
     augroup YankHighlight
