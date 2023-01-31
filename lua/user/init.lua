@@ -9,10 +9,10 @@ local config = {
   -- Configure AstroNvim updates
   updater = {
     remote = "origin", -- remote to use
-    channel = "nightly", -- "stable" or "nightly"
+    channel = "stable", -- "stable" or "nightly"
     version = "latest", -- "latest", tag name, or regex search like "v1.*" to only do updates before v2 (STABLE ONLY)
     branch = "main", -- branch name (NIGHTLY ONLY)
-    commit = nil, -- commit hash (NIGHTLY ONLY)
+    commit = "556666a", -- commit hash (NIGHTLY ONLY)
     pin_plugins = nil, -- nil, true, false (nil will pin plugins on stable only)
     skip_prompts = false, -- skip prompts about breaking changes
     show_changelog = true, -- show the changelog after performing an update
@@ -266,6 +266,7 @@ local config = {
         {"lunarvim/darkplus.nvim"},
         {"dracula/vim"},
         {"romgrk/doom-one.vim"},
+        {"AstroNvim/astrotheme"},
       -- We also support a key value style plugin definition similar to NvChad:
       -- ["ray-x/lsp_signature.nvim"] = {
       --   event = "BufRead",
