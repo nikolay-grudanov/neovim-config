@@ -27,7 +27,8 @@ local config = {
 
   -- Set colorscheme to use
   -- colorscheme = "default_theme",
-     colorscheme = "doom-one",
+  -- colorscheme = "doom-one",
+     colorscheme = "dracula",
 
   -- Add highlight groups in any theme
   highlights = {
@@ -232,7 +233,7 @@ local config = {
       ["<leader>b]"] = {"<cmd>BufferLineCycleNext<cr>", desc = "Next buffer tab"},
       ["<leader>b["] = { "<cmd>BufferLineCyclePrev<cr>", desc = "Previous buffer tab" },
       ["<leader>ba"] = {"<cr>", desc = "All" }, 
-      ["<leader>bac"] = { "<cmd>%y+ <CR>", desc = "Copy all" },
+      ["<leader>bay"] = { "<cmd>%y+ <CR>", desc = "Copy all" },
       ["<leader>bad"] = {"<cmd>%d <CR>", desc = "Delete all"},
 
 
@@ -267,6 +268,7 @@ local config = {
         {"dracula/vim"},
         {"romgrk/doom-one.vim"},
         {"AstroNvim/astrotheme"},
+        {"habamax/vim-asciidoctor"},
       -- We also support a key value style plugin definition similar to NvChad:
       -- ["ray-x/lsp_signature.nvim"] = {
       --   event = "BufRead",
