@@ -5,28 +5,22 @@ end
 
 local dashboard = require("alpha.themes.dashboard")
 dashboard.section.header.val = {
-	-- [[                               __                ]],
-	-- [[  ___     ___    ___   __  __ /\_\    ___ ___    ]],
-	-- [[ / _ `\  / __`\ / __`\/\ \/\ \\/\ \  / __` __`\  ]],
-	-- [[/\ \/\ \/\  __//\ \_\ \ \ \_/ |\ \ \/\ \/\ \/\ \ ]],
-	-- [[\ \_\ \_\ \____\ \____/\ \___/  \ \_\ \_\ \_\ \_\]],
-	-- [[ \/_/\/_/\/____/\/___/  \/__/    \/_/\/_/\/_/\/_/]],
-" ",
- " ",
- "░██████╗░░░░░░░███╗░░██╗███████╗░█████╗░██╗░░░██╗██╗███╗░░░███╗",
- "██╔════╝░░░░░░░████╗░██║██╔════╝██╔══██╗██║░░░██║██║████╗░████║",
- "██║░░██╗░█████╗██╔██╗██║█████╗░░██║░░██║╚██╗░██╔╝██║██╔████╔██║",
- "██║░░╚██╗╚════╝██║╚████║██╔══╝░░██║░░██║░╚████╔╝░██║██║╚██╔╝██║",
- "╚██████╔╝░░░░░░██║░╚███║███████╗╚█████╔╝░░╚██╔╝░░██║██║░╚═╝░██║",
- "░╚═════╝░░░░░░░╚═╝░░╚══╝╚══════╝░╚════╝░░░░╚═╝░░░╚═╝╚═╝░░░░░╚═╝",
- " ",
+	" ",
+	" ",
+	"░██████╗░░░░░░░███╗░░██╗███████╗░█████╗░██╗░░░██╗██╗███╗░░░███╗",
+	"██╔════╝░░░░░░░████╗░██║██╔════╝██╔══██╗██║░░░██║██║████╗░████║",
+	"██║░░██╗░█████╗██╔██╗██║█████╗░░██║░░██║╚██╗░██╔╝██║██╔████╔██║",
+	"██║░░╚██╗╚════╝██║╚████║██╔══╝░░██║░░██║░╚████╔╝░██║██║╚██╔╝██║",
+	"╚██████╔╝░░░░░░██║░╚███║███████╗╚█████╔╝░░╚██╔╝░░██║██║░╚═╝░██║",
+	"░╚═════╝░░░░░░░╚═╝░░╚══╝╚══════╝░╚════╝░░░░╚═╝░░░╚═╝╚═╝░░░░░╚═╝",
+	" ",
 }
 dashboard.section.buttons.val = {
 	dashboard.button("f", "  Find file", ":Telescope find_files <CR>"),
 	dashboard.button("e", "  New file", ":ene <BAR> startinsert <CR>"),
 	-- dashboard.button("p", "  Find project", ":Telescope projects <CR>"),
 	dashboard.button("S", "  Last Session", ":SessionManager! load_last_session<CR>"),
-    dashboard.button("b", "  Bookmarks ", ":Telescope marks <CR>"),
+	dashboard.button("b", "  Bookmarks ", ":Telescope marks <CR>"),
 	dashboard.button("r", "  Recently used files", ":Telescope oldfiles <CR>"),
 	dashboard.button("t", "  Find text", ":Telescope live_grep <CR>"),
 	dashboard.button("c", "  Configuration", ":e ~/.config/nvim/init.lua <CR>"),
@@ -35,12 +29,12 @@ dashboard.section.buttons.val = {
 }
 
 local function footer()
--- NOTE: requires the fortune-mod package to work
+	-- NOTE: requires the fortune-mod package to work
 	-- local handle = io.popen("fortune")
 	-- local fortune = handle:read("*a")
 	-- handle:close()
 	-- return fortune
-	return 	" github.com/nikolay-grudanov/neovim-config"
+	return " github.com/nikolay-grudanov/neovim-config"
 end
 
 dashboard.section.footer.val = footer()

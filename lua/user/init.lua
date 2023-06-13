@@ -1,11 +1,9 @@
 --              AstroNvim Configuration Table
 -- All configuration changes should go inside of the table below
-
 -- You can think of a Lua "table" as a dictionary like data structure the
 -- normal format is "key = value". These also handle array like data structures
 -- where a value with no key simply has an implicit numeric key
 local config = {
-
 	-- Configure AstroNvim updates
 	updater = {
 		remote = "origin", -- remote to use
@@ -33,8 +31,8 @@ local config = {
 	-- Add highlight groups in any theme
 	highlights = {
 		-- init = { -- this table overrides highlights in all themes
-		--   Normal = { bg = "#000000" },
-		-- }
+		-- 	Normal = { bg = "#000000" },
+		-- },
 		-- duskfox = { -- a table of overrides/changes to the duskfox theme
 		--   Normal = { bg = "#000000" },
 		-- },
@@ -59,17 +57,17 @@ local config = {
 			spelllang = { "en", "ru" }, -- Словари рус eng
 			guifont = { "Hack Nerd Font Mono:h16" },
 			termguicolors = true, --  24-bit RGB colors
-			iminsert = 0, -- Чтобы при старте ввод был на английском, а не русском (start > i)
-			imsearch = 0, -- Чтобы при старте поиск был на английском, а не русском (start > /)
+			iminsert = 0,      -- Чтобы при старте ввод был на английском, а не русском (start > i)
+			imsearch = 0,      -- Чтобы при старте поиск был на английском, а не русском (start > /)
 		},
 		g = {
-			mapleader = " ", -- sets vim.g.mapleader
+			mapleader = " ",          -- sets vim.g.mapleader
 			autoformat_enabled = true, -- enable or disable auto formatting at start (lsp.formatting.format_on_save must be enabled)
-			cmp_enabled = true, -- enable completion at start
+			cmp_enabled = true,       -- enable completion at start
 			autopairs_enabled = true, -- enable autopairs at start
 			diagnostics_enabled = true, -- enable diagnostics at start
 			status_diagnostics_enabled = true, -- enable diagnostics in statusline
-			icons_enabled = true, -- disable icons in the UI (disable if no nerd font is available, requires :PackerSync after changing)
+			icons_enabled = true,     -- disable icons in the UI (disable if no nerd font is available, requires :PackerSync after changing)
 			--NEOVIDE
 			neovide_cursor_vfx_mode = "sonicboom",
 		},
@@ -85,28 +83,19 @@ local config = {
 	-- end,
 
 	-- Set dashboard header
-	header = {
-		-- " █████  ███████ ████████ ██████   ██████",
-		-- "██   ██ ██         ██    ██   ██ ██    ██",
-		-- "███████ ███████    ██    ██████  ██    ██",
-		-- "██   ██      ██    ██    ██   ██ ██    ██",
-		-- "██   ██ ███████    ██    ██   ██  ██████",
-		-- " ",
-		-- "    ███    ██ ██    ██ ██ ███    ███",
-		-- "    ████   ██ ██    ██ ██ ████  ████",
-		-- "    ██ ██  ██ ██    ██ ██ ██ ████ ██",
-		-- "    ██  ██ ██  ██  ██  ██ ██  ██  ██",
-		-- "    ██   ████   ████   ██ ██      ██",
-		" ",
-		" ",
-		"░██████╗░░░░░░░███╗░░██╗███████╗░█████╗░██╗░░░██╗██╗███╗░░░███╗",
-		"██╔════╝░░░░░░░████╗░██║██╔════╝██╔══██╗██║░░░██║██║████╗░████║",
-		"██║░░██╗░█████╗██╔██╗██║█████╗░░██║░░██║╚██╗░██╔╝██║██╔████╔██║",
-		"██║░░╚██╗╚════╝██║╚████║██╔══╝░░██║░░██║░╚████╔╝░██║██║╚██╔╝██║",
-		"╚██████╔╝░░░░░░██║░╚███║███████╗╚█████╔╝░░╚██╔╝░░██║██║░╚═╝░██║",
-		"░╚═════╝░░░░░░░╚═╝░░╚══╝╚══════╝░╚════╝░░░░╚═╝░░░╚═╝╚═╝░░░░░╚═╝",
-		" ",
-	},
+	-- header = {
+	-- " █████  ███████ ████████ ██████   ██████",
+	-- "██   ██ ██         ██    ██   ██ ██    ██",
+	-- "███████ ███████    ██    ██████  ██    ██",
+	-- "██   ██      ██    ██    ██   ██ ██    ██",
+	-- "██   ██ ███████    ██    ██   ██  ██████",
+	-- " ",
+	-- "    ███    ██ ██    ██ ██ ███    ███",
+	-- "    ████   ██ ██    ██ ██ ████  ████",
+	-- "    ██ ██  ██ ██    ██ ██ ██ ████ ██",
+	-- "    ██  ██ ██  ██  ██  ██ ██  ██  ██",
+	-- "    ██   ████   ████   ██ ██      ██",
+	-- },
 
 	-- Default theme configuration
 	default_theme = {
@@ -232,8 +221,9 @@ local config = {
 			["<leader>b]"] = { "<cmd>BufferLineCycleNext<cr>", desc = "Next buffer tab" },
 			["<leader>b["] = { "<cmd>BufferLineCyclePrev<cr>", desc = "Previous buffer tab" },
 			-- ["<leader>ba"] = { "<cr>", desc = "All" },
-			["<leader>bay"] = { "<cmd>%y+ <CR>", desc = "Copy all" },
-			["<leader>bad"] = { "<cmd>%d <CR>", desc = "Delete all" },
+			-- ["<leader>bay"] = { "<cmd>%y+ <CR>", desc = "Copy all" },
+			["<leader>bay"] = { ":%y+<cr><Esc>", desc = "Copy all" },
+			["<leader>bad"] = { "<cmd>%d <cr>", desc = "Delete all" },
 
 			-- quick save
 			-- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
@@ -260,15 +250,15 @@ local config = {
 			--     require("lsp_signature").setup()
 			--   end,
 			-- },
-			{ "datamonsterr/nvim-dracula" },
 			{ "lunarvim/colorschemes" }, -- A bunch of colorschemes you can try out
 			{ "lunarvim/darkplus.nvim" },
 			{ "dracula/vim" },
 			{ "romgrk/doom-one.vim" },
-			-- {"AstroNvim/astrotheme"},
+			{ "AstroNvim/astrotheme" },
 			{ "habamax/vim-asciidoctor" },
 			["NvChad/nvim-colorizer.lua"] = { disable = true },
 			{ "mattn/emmet-vim" },
+			{ "nvim-lua/plenary.nvim" },
 			["brenoprata10/nvim-highlight-colors"] = {
 				config = function()
 					require("nvim-highlight-colors").setup({
@@ -278,12 +268,83 @@ local config = {
 				end,
 			},
 			["folke/todo-comments.nvim"] = {
-				requires = "nvim-lua/plenary.nvim",
+				-- requires = "nvim-lua/plenary.nvim",
 				config = function()
 					require("todo-comments").setup({
 						-- your configuration comes here
 						-- or leave it empty to use the default settings
 						-- refer to the configuration section below
+						signs = true, -- show icons in the signs column
+						sign_priority = 8, -- sign priority
+						-- keywords recognized as todo comments
+						keywords = {
+							FIX = {
+								icon = " ",      -- icon used for the sign, and in search results
+								color = "error",    -- can be a hex color, or a named color (see below)
+								alt = { "FIXME", "BUG", "FIXIT", "ISSUE" }, -- a set of other keywords that all map to this FIX keywords
+								-- signs = false, -- configure signs for some keywords individually
+							},
+							TODO = { icon = " ", color = "info" },
+							HACK = { icon = " ", color = "warning" },
+							WARN = { icon = " ", color = "warning", alt = { "WARNING", "XXX" } },
+							PERF = { icon = " ", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
+							NOTE = { icon = " ", color = "hint", alt = { "INFO" } },
+							TEST = { icon = "⏲ ", color = "test", alt = { "TESTING", "PASSED", "FAILED" } },
+							-- Примеры отображения
+							-- TODO: пример текста
+							-- FIX: пример текста
+							-- HACK: пример текста
+							-- WARN: пример текста
+							-- PERF: пример текста
+							-- NOTE: пример текста
+							-- TEST: пример текста
+
+						},
+						gui_style = {
+							fg = "NONE", -- The gui style to use for the fg highlight group.
+							bg = "BOLD", -- The gui style to use for the bg highlight group.
+						},
+						merge_keywords = true, -- when true, custom keywords will be merged with the defaults
+						-- highlighting of the line containing the todo comment
+						-- * before: highlights before the keyword (typically comment characters)
+						-- * keyword: highlights of the keyword
+						-- * after: highlights after the keyword (todo text)
+						highlight = {
+							multiline = true, -- enable multine todo comments
+							multiline_pattern = "^.", -- lua pattern to match the next multiline from the start of the matched keyword
+							multiline_context = 10, -- extra lines that will be re-evaluated when changing a line
+							before = "", -- "fg" or "bg" or empty
+							keyword = "wide", -- "fg", "bg", "wide", "wide_bg", "wide_fg" or empty. (wide and wide_bg is the same as bg, but will also highlight surrounding characters, wide_fg acts accordingly but with fg)
+							after = "fg", -- "fg" or "bg" or empty
+							pattern = [[.*<(KEYWORDS)\s*:]], -- pattern or table of patterns, used for highlighting (vim regex)
+							comments_only = true, -- uses treesitter to match keywords in comments only
+							max_line_len = 400, -- ignore lines longer than this
+							exclude = {}, -- list of file types to exclude highlighting
+						},
+						-- list of named colors where we try to extract the guifg from the
+						-- list of highlight groups or use the hex color if hl not found as a fallback
+						colors = {
+							error = { "DiagnosticError", "ErrorMsg", "#DC2626" },
+							warning = { "DiagnosticWarn", "WarningMsg", "#FBBF24" },
+							info = { "DiagnosticInfo", "#2563EB" },
+							hint = { "DiagnosticHint", "#10B981" },
+							default = { "Identifier", "#7C3AED" },
+							test = { "Identifier", "#FF00FF" }
+						},
+						search = {
+							command = "rg",
+							args = {
+								"--color=never",
+								"--no-heading",
+								"--with-filename",
+								"--line-number",
+								"--column",
+							},
+							-- regex that will be used to match keywords.
+							-- don't replace the (KEYWORDS) placeholder
+							pattern = [[\b(KEYWORDS):]], -- ripgrep regex
+							-- pattern = [[\b(KEYWORDS)\b]], -- match without the extra colon. You'll likely get false positives
+						},
 					})
 				end,
 			},
@@ -293,6 +354,42 @@ local config = {
 						pre_hook = require("ts_context_commentstring.integrations.comment_nvim").create_pre_hook(),
 					})
 				end,
+			},
+			-- ['quarto-dev/quarto-nvim'] = {
+			-- 	config = function()
+			-- 		require("quarto").setup({
+			-- 			-- debug = false,
+			-- closePreviewOnExit = true,
+			-- lspFeatures = {
+			-- 	enabled = true,
+			-- 	languages = { 'r', 'python', 'julia', 'bash' },
+			-- 	chunks = 'curly', -- 'curly' or 'all'
+			-- 	diagnostics = {
+			-- 		enabled = true,
+			-- 		triggers = { "BufWritePost" }
+			-- 	},
+			-- 	completion = {
+			-- 		enabled = true,
+			-- 	},
+			-- },
+			-- keymap = {
+			-- 	hover = 'K',
+			-- 	definition = 'gd',
+			-- 	rename = '<leader>lR',
+			-- 	references = 'gr',
+			-- }
+			-- 		})
+			-- 	end,
+			-- },
+			{ 'quarto-dev/quarto-nvim' },
+			{ 'jmbuhr/otter.nvim' },
+			{ 'dccsillag/magma-nvim',  run = ':UpdateRemotePlugins' },
+			['edluffy/hologram.nvim'] = {
+				config = function()
+					require('hologram').setup {
+						auto_display = true -- WIP automatic markdown image display, may be prone to breaking
+					}
+				end
 			},
 			-- We also support a key value style plugin definition similar to NvChad:
 			-- ["ray-x/lsp_signature.nvim"] = {
@@ -395,6 +492,7 @@ local config = {
 		require("setting")
 		-- require "plugins.whichkey"
 		require("plugins.alpha")
+		-- require("plugins.quarto")
 		-- require "plugins.dashboard"
 	end,
 }
