@@ -8,7 +8,7 @@ local config = {
 	updater = {
 		remote = "origin", -- remote to use
 		channel = "stable", -- "stable" or "nightly"
-		version = "latest", -- "latest", tag name, or regex search like "v1.*" to only do updates before v2 (STABLE ONLY)
+		version = "v2.*", -- "latest", tag name, or regex search like "v1.*" to only do updates before v2 (STABLE ONLY)
 		branch = "main", -- branch name (NIGHTLY ONLY)
 		commit = "556666a", -- commit hash (NIGHTLY ONLY)
 		pin_plugins = nil, -- nil, true, false (nil will pin plugins on stable only)
@@ -224,6 +224,16 @@ local config = {
 			-- ["<leader>bay"] = { "<cmd>%y+ <CR>", desc = "Copy all" },
 			["<leader>bay"] = { ":%y+<cr><Esc>", desc = "Copy all" },
 			["<leader>bad"] = { "<cmd>%d <cr>", desc = "Delete all" },
+			["<leader>bs"] = {"<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>", desc = "Search buffers"},
+			-- терминалы
+    		["<leader>tm"] = { "<cmd>lua _MC_TOGGLE()<cr>", desc = "MC"},
+    		["<leader>tU"] = { "<cmd>lua _NCDU_TOGGLE()<cr>", desc = "ncudu"},
+    		["<leader>tH"] = { "<cmd>lua _HTOP_TOGGLE()<cr>", desc = "htop"},
+    		-- search
+    		["<leader>so"] = { "<cmd>Telescope oldfiles<cr>", desc = "Search old file" },
+			["<leader>sC"] = { "<cmd>Telescope colorscheme<cr>", desc = "Colorscheme" },
+			["<leader>st"] = { "<cmd>TodoTelescope<cr>", desc = "TODO" },
+
 
 			-- quick save
 			-- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
@@ -383,14 +393,14 @@ local config = {
 			-- },
 			{ 'quarto-dev/quarto-nvim' },
 			{ 'jmbuhr/otter.nvim' },
-			{ 'dccsillag/magma-nvim',  run = ':UpdateRemotePlugins' },
-			['edluffy/hologram.nvim'] = {
-				config = function()
-					require('hologram').setup {
-						auto_display = true -- WIP automatic markdown image display, may be prone to breaking
-					}
-				end
-			},
+			-- { 'dccsillag/magma-nvim',  run = ':UpdateRemotePlugins' },
+			-- ['edluffy/hologram.nvim'] = {
+			-- 	config = function()
+			-- 		require('hologram').setup {
+			-- 			auto_display = true -- WIP automatic markdown image display, may be prone to breaking
+			-- 		}
+			-- 	end
+			-- },
 			-- We also support a key value style plugin definition similar to NvChad:
 			-- ["ray-x/lsp_signature.nvim"] = {
 			--   event = "BufRead",
@@ -492,6 +502,7 @@ local config = {
 		require("setting")
 		-- require "plugins.whichkey"
 		require("plugins.alpha")
+		require("plugins.toggleterm")
 		-- require("plugins.quarto")
 		-- require "plugins.dashboard"
 	end,
