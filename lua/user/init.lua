@@ -279,6 +279,7 @@ local config = {
 			},
 			["folke/todo-comments.nvim"] = {
 				-- requires = "nvim-lua/plenary.nvim",
+				dependencies = "nvim-lua/plenary.nvim",
 				config = function()
 					require("todo-comments").setup({
 						-- your configuration comes here
@@ -296,7 +297,7 @@ local config = {
 							},
 							TODO = { icon = " ", color = "info" },
 							HACK = { icon = " ", color = "warning" },
-							WARN = { icon = " ", color = "warning", alt = { "WARNING", "XXX" } },
+							WARN = { icon = " ", color = "warning", alt = { "WARNING", "XXX"} },
 							PERF = { icon = " ", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
 							NOTE = { icon = " ", color = "hint", alt = { "INFO" } },
 							TEST = { icon = "⏲ ", color = "test", alt = { "TESTING", "PASSED", "FAILED" } },
@@ -305,6 +306,7 @@ local config = {
 							-- FIX: пример текста
 							-- HACK: пример текста
 							-- WARN: пример текста
+							-- XXX: foo
 							-- PERF: пример текста
 							-- NOTE: пример текста
 							-- TEST: пример текста
@@ -326,7 +328,7 @@ local config = {
 							before = "", -- "fg" or "bg" or empty
 							keyword = "wide", -- "fg", "bg", "wide", "wide_bg", "wide_fg" or empty. (wide and wide_bg is the same as bg, but will also highlight surrounding characters, wide_fg acts accordingly but with fg)
 							after = "fg", -- "fg" or "bg" or empty
-							pattern = [[.*<(KEYWORDS)\s*:]], -- pattern or table of patterns, used for highlighting (vim regex)
+							pattern = [[.*(KEYWORDS)\s*:]], -- pattern or table of patterns, used for highlighting (vim regex)
 							comments_only = true, -- uses treesitter to match keywords in comments only
 							max_line_len = 400, -- ignore lines longer than this
 							exclude = {}, -- list of file types to exclude highlighting
@@ -500,6 +502,7 @@ local config = {
 		-- }
 		--
 		require("setting")
+		require("keymap")
 		-- require "plugins.whichkey"
 		require("plugins.alpha")
 		require("plugins.toggleterm")
