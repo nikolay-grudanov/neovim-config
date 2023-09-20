@@ -22,7 +22,7 @@ return {
 				opts.button("e", get_icon("FileNew", 2, true) .. " New file", ":ene <BAR> startinsert <CR>"),
 				opts.button("r", get_icon("Refresh", 2, true) .. " Recently used files", ":Telescope oldfiles <CR>"),
 				opts.button("f", get_icon("Search", 2, true) .. " Find file", ":Telescope find_files <CR>"),
-				opts.button("p", "  Find project", ":Telescope projects <CR>"),
+				opts.button("p", "   Find project", ":Telescope projects <CR>"),
 				opts.button("t", get_icon("WordFile", 2, true) .. " Find text", ":Telescope live_grep <CR>"),
 				opts.button("b", get_icon("Bookmarks", 2, true) .. " Bookmarks ", ":Telescope marks <CR>"),
 				opts.button("S", get_icon("Session", 2, true) .. " Last Session", ":SessionManager! load_last_session<CR>"),
